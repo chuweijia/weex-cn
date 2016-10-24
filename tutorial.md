@@ -63,9 +63,13 @@ weex tech_list.we
 
 现在是时候来介绍语法了。
 
-如`tech_list.we`文件中所示，Weex代码包含三个部分--_**template（模版）,style**__（样式）_和_**script**__（脚本）_，就好比web文件中的_html_,_css_和_javascript_一样。
+如`tech_list.we`文件中所示，Weex代码包含三个部分--**_template（模版）,style_**_**（样式）**_和**_script_**_**（脚本）**_，就好比web文件中的_html_,_css_和_javascript_一样。
 
-Template是Weex的骨架，他由标签以及标签所包含的内容组成。标签又分为两种：开标签和闭标签。我们把一对由开标签和闭标签组合的标签称为一组Weex标签。标签具有不同的_属性_，不同的属性代表不同的含义，例如`class属性`可以将相同的样式赋予多个标签，`onclick属性`让标签可以响应点击事件。
+**Template**是Weex的骨架，他由标签以及标签所包含的内容组成。标签又分为两种：开标签和闭标签。我们把一对由开标签和闭标签组合的标签称为一组Weex标签。标签具有不同的_属性_，不同的属性代表不同的含义，例如`class属性`可以将相同的样式赋予多个标签，`onclick属性`让标签可以响应点击事件。
 
-Style
+**Style**规定了Weex标签如何展示，我们跟你一样喜欢CSS，所以我们尽可能的跟CSS标准保持了一致。Weex样式支持非常多的CSS功能，如margin,padding,fixed等等。更妙的是，flexbox布局在Weex中也得到了很好的支持。
+
+**Script**可以将数据和逻辑添加到标签之中，使你更方便的访问本地或远程数据并且动态的更新标签。当然，你也可以定义一些方法来让标签响应不同的事件。 Weex Script的组织方式遵循CommonJS module规范。 
+
+
 
