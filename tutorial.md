@@ -31,7 +31,7 @@
 
 因为Weex工具都是使用Node.js所构建，我们首先需要安装Node，然后运行下面的代码，安装Weex命令行工具Weex Toolkit ：
 
-```
+```bash
 npm install -g weex-toolkit
 ```
 
