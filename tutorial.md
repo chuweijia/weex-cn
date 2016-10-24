@@ -63,5 +63,7 @@ weex tech_list.we
 
 现在是时候来介绍语法了。
 
-如`tech_list.we`文件中所示，Weex代码包含三个部分--_template,style_和_script_，就好比web文件中的_html_,_css_和_javascript_一样。
+如`tech_list.we`文件中所示，Weex代码包含三个部分--_**template**__（模版）,__**style**__（样式）_和_**script**__（脚本）_，就好比web文件中的_html_,_css_和_javascript_一样。
+
+Template是Weex的骨架，他由标签以及标签所包含的内容组成。
 
