@@ -12,5 +12,5 @@
        * [组件封装](component_composed.md)
        * [查找元素](find_element.md)
        * [组件通信](communications.md)
-       * 页面数据配置
+       * [页面数据配置](config.md)
 
