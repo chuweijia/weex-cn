@@ -29,11 +29,9 @@
 
 文件建立完毕后，我们都会迫不及待的看到.we文件运行后的结果。但是在这之前，我们必须确保已经安装了依赖环境。
 
-因为Weex工具都是使用Node.js所构建，我们首先需要安装Node，然后运行下面的代码，安装weex-toolkit：
+因为Weex工具都是使用Node.js所构建，我们首先需要安装Node，然后运行下面的代码，安装Weex命令行工具Weex Toolkit ：
 
 ```
 npm install -g weex-toolkit
 ```
-
-
 
