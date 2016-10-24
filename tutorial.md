@@ -6,29 +6,22 @@
 
 我们从一个列表项开始，这个列表项包含一个image（图片）和位于图片右侧的文字说明。
 
-&lt;template&gt;
+```
+<template>
+  <div class="container">
+    <div class="cell">
+        <image class="thumb" src="http://t.cn/RGE3AJt"></image>
+        <text class="title">JavaScript</text>
+    </div>
+  </div>
+</template>
 
- &lt;div class="container"&gt;
+<style>
+  .cell { margin-top: 10; margin-left: 10; flex-direction: row; }
+  .thumb { width: 200; height: 200; }
+  .title { text-align: center; flex: 1; color: grey; font-size: 50; }
+</style>
+```
 
- &lt;div class="cell"&gt;
 
- &lt;image class="thumb" src="http:\/\/t.cn\/RGE3AJt"&gt;&lt;\/image&gt;
-
- &lt;text class="title"&gt;JavaScript&lt;\/text&gt;
-
- &lt;\/div&gt;
-
- &lt;\/div&gt;
-
-&lt;\/template&gt;
-
-&lt;style&gt;
-
- .cell { margin-top: 10; margin-left: 10; flex-direction: row; }
-
- .thumb { width: 200; height: 200; }
-
- .title { text-align: center; flex: 1; color: grey; font-size: 50; }
-
-&lt;\/style&gt;
 
