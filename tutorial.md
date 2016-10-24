@@ -63,7 +63,7 @@ weex tech_list.we
 
 现在是时候来介绍语法了。
 
-如`tech_list.we`文件中所示，Weex代码包含三个部分--_**template（模版）,style**_**_（样式）_**和_**script**_**_（脚本）_**，就好比web文件中的_html_,_css_和_javascript_一样。
+如`tech_list.we`文件中所示，Weex代码包含三个部分--**_template（模版）,style_**_**（样式）**_和**_script_**_**（脚本）**_，就好比web文件中的_html_,_css_和_javascript_一样。
 
 **Template**是Weex的骨架，他由标签以及标签所包含的内容组成。标签又分为两种：开标签和闭标签。我们把一对由开标签和闭标签组合的标签称为一组Weex标签。标签具有不同的_属性_，不同的属性代表不同的含义，例如`class属性`可以将相同的样式赋予多个标签，`onclick属性`让标签可以响应点击事件。
 
@@ -72,4 +72,39 @@ weex tech_list.we
 **Script**可以将数据和逻辑添加到标签之中，使你更方便的访问本地或远程数据并且动态的更新标签。当然，你也可以定义一些方法来让标签响应不同的事件。 Weex Script的组织方式遵循CommonJS module规范。
 
 更多关于Weex语法的信息，可以点击[语法章节](/syntax.md)查看。
+
+## 添加多个列表项
+
+通常，一个列表不会仅有一个列表项，所以我们需要在我们的tech列表中添加更多的列表项。在你心爱的编辑器中打开`tech_list.we`文件，然后更新至如下代码：
+
+```css
+<template>
+  <div class="container">
+    <div class="cell">
+        <image class="thumb" src="http://t.cn/RGE3AJt"></image>
+        <text class="title">JavaScript</text>
+    </div>
+    <div class="cell">
+        <image class="thumb" src="http://t.cn/RGE3uo9"></image>
+        <text class="title">Java</text>
+    </div>
+    <div class="cell">
+        <image class="thumb" src="http://t.cn/RGE31hq"></image>
+        <text class="title">Objective C</text>
+    </div>
+  </div>
+</template>
+
+<style>
+  .cell{ margin-top:10 ; margin-left:10 ; flex-direction: row; }
+  .thumb { width: 200; height: 200; }
+  .title { text-align: center ; flex: 1; color: grey; font-size: 50; }
+</style>
+```
+
+现在，让我们来尝试使用Weex Native渲染器来渲染这个文件。再一次的打开你的终端并且切换到刚才保存`tech_list.we`文件的目录下，运行如下代码：
+
+```bash
+weex tech_list.we --qr -h {ip or hostname}
+```
 
