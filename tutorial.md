@@ -6,7 +6,7 @@
 
 我们从一个列表项开始，这个列表项包含一个image（图片）和位于图片右侧的文字说明。
 
-```py
+```css
 <template>
   <div class="container">
     <div class="cell">
