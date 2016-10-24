@@ -3,5 +3,5 @@
 * [简介](README.md)
 * [指南](guide.md)
    * [快速上手](tutorial.md)
-   * 语法
+   * [语法](syntax.md)
 
