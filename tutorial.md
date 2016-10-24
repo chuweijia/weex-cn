@@ -63,7 +63,7 @@ weex tech_list.we
 
 现在是时候来介绍语法了。
 
-如`tech_list.we`文件中所示，Weex代码包含三个部分--_**template（模版）,style**_**_（样式）_**和_**script**_**_（脚本）_**，就好比web文件中的_html_,_css_和_javascript_一样。
+如`tech_list.we`文件中所示，Weex代码包含三个部分--**_template（模版）,style_**_**（样式）**_和**_script_**_**（脚本）**_，就好比web文件中的_html_,_css_和_javascript_一样。
 
 **Template**是Weex的骨架，他由标签以及标签所包含的内容组成。标签又分为两种：开标签和闭标签。我们把一对由开标签和闭标签组合的标签称为一组Weex标签。标签具有不同的_属性_，不同的属性代表不同的含义，例如`class属性`可以将相同的样式赋予多个标签，`onclick属性`让标签可以响应点击事件。
 
@@ -107,6 +107,18 @@ weex tech_list.we
 ```bash
 weex tech_list.we --qr -h {ip or hostname}
 ```
+
+我们推荐使用`-h`命令符去指定你的本地IP地址或域名。
+
+在终端窗口将会显示一个二维码，如下图所示：
+
+![](/assets/tut-cli-qrcode.png)
+
+这个二维码需要在[Weex Playground App](http://alibaba.github.io/weex/download.html)中工作。下载安装后，打开此APP，点击右上角的扫码图标扫描此二维码 ，如果运行成功，一个漂亮的列表将会显示在你的手机界面上。
+
+![](/assets/tut-second.png)
+
+在这里，我必须要强调一下，这是列表完全是由native view来渲染的，并非Webkit。相比之下，native view加载速度更快且耗费的内存更小。
 
 
 
