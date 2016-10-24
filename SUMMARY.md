@@ -11,5 +11,5 @@
        * [渲染逻辑控制](render_logic_control.md)
        * [组件封装](component_composed.md)
        * [查找元素](find_element.md)
-       * 组件通信
+       * [组件通信](communications.md)
 
