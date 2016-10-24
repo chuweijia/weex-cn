@@ -7,5 +7,5 @@
        * [数据绑定](data_binding.md)
        * [样式和类](style_class.md)
        * [事件](events.md)
-       * 显示逻辑控制
+       * [显示逻辑控制](display_logic_control.md)
 
