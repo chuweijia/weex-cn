@@ -63,5 +63,5 @@ weex tech_list.we
 
 现在是时候来介绍语法了。
 
-如`tech_list.we`文件中所示，Weex代码包含三个部分--_template,style_和_script_，就像web文件中的_html_,_css_和_javascript_一样。
+如`tech_list.we`文件中所示，Weex代码包含三个部分--_template,style_和_script_，就好比web文件中的_html_,_css_和_javascript_一样。
 
