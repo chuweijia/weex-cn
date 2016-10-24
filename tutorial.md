@@ -57,3 +57,9 @@ weex tech_list.we
 
 你默认的浏览器会自动打开新的窗口并显示一下内容（在这之前你最好运行`weex --version`来检查你的Weex Toolkit 版本是否大于0.1.0）：
 
+![](/assets/TB1y151LVXXXXXXaXXXoRYgWVXX-495-584.jpg)
+
+## Weex语法简介
+
+
+
