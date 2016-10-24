@@ -8,5 +8,5 @@
        * [样式和类](style_class.md)
        * [事件](events.md)
        * [显示逻辑控制](display_logic_control.md)
-       * 渲染逻辑控制
+       * [渲染逻辑控制](render_logic_control.md)
 
