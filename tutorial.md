@@ -63,7 +63,7 @@ weex tech_list.we
 
 现在是时候来介绍语法了。
 
-如`tech_list.we`文件中所示，Weex代码包含三个部分--**_template（模版）,style_**_**（样式）**_和**_script_**_**（脚本）**_，就好比web文件中的_html_,_css_和_javascript_一样。
+如`tech_list.we`文件中所示，Weex代码包含三个部分--_**template（模版）,style**_**_（样式）_**和_**script**_**_（脚本）_**，就好比web文件中的_html_,_css_和_javascript_一样。
 
 **Template**是Weex的骨架，他由标签以及标签所包含的内容组成。标签又分为两种：开标签和闭标签。我们把一对由开标签和闭标签组合的标签称为一组Weex标签。标签具有不同的_属性_，不同的属性代表不同的含义，例如`class属性`可以将相同的样式赋予多个标签，`onclick属性`让标签可以响应点击事件。
 
@@ -120,5 +120,86 @@ weex tech_list.we --qr -h {ip or hostname}
 
 在这里，我必须要强调一下，这是列表完全是由native view来渲染的，并非Webkit。相比之下，native view加载速度更快且耗费的内存更小。
 
+现在你可以随意的将tech\_list.we文件内容进行更改，保存之后你会发现，Weex Playground APP立刻就将所更改的内容显示了出来。我们把它称为**Hot-Reload（热加载）**，它可以帮助你更好的运用Weex进行开发。
 
+## 添加内置组件
+
+除了自己手动的去一个个编写标签，Weex还提供了非常多的内置组件。举个例子，Slider（滑动）是许多App和移动站点中非常常用的一个功能，所以Weex提供了一个内置的Slider来让你更方便的在界面中实现滑动效果。让我们打开`tech_list.we`文件然后更新至如下代码：
+
+```js
+<template>
+  <div style="flex-direction: column;">
+    <slider class="slider" interval="{{intervalValue}}" auto-play="{{isAutoPlay}}" >
+      <div class="slider-pages" repeat="{{itemList}}" onclick="goWeexSite" >
+        <image class="thumb" src="{{pictureUrl}}"></image>
+        <text class="title">{{title}}</text>
+      </div>
+    </slider>
+
+  <div class="container" onclick="goWeexSite" >
+    <div class="cell">
+        <image class="thumb" src="http://t.cn/RGE3AJt"></image>
+        <text class="title">JavaScript</text>
+    </div>
+    <div class="cell">
+        <image class="thumb" src="http://t.cn/RGE3uo9"></image>
+        <text class="title">Java</text>
+    </div>
+    <div class="cell">
+        <image class="thumb" src="http://t.cn/RGE31hq"></image>
+        <text class="title">Objective C</text>
+    </div>
+  </div>
+</template>
+
+<style>
+  .cell { margin-top:10 ; margin-left:10 ; flex-direction: row; }
+  .thumb { width: 200; height: 200; }
+  .title { text-align: center ; flex: 1; color: grey; font-size: 50; }
+  .slider {
+    margin: 18;
+    width: 714;
+    height: 230;
+  }
+  .slider-pages {
+    flex-direction: row;
+    width: 714;
+    height: 200;
+  }
+</style>
+
+<script>
+module.exports = {
+    data: {
+      intervalValue:"1000",
+      isShowIndicators:"true",
+      isAutoPlay:"true",
+      itemList: [
+        {title: 'Java', pictureUrl: 'http://t.cn/RGE3uo9'},
+        {title: 'Objective C', pictureUrl: 'http://t.cn/RGE31hq'},
+        {title: 'JavaScript', pictureUrl: 'http://t.cn/RGE3AJt'}
+      ]
+    },
+    methods: {
+      goWeexSite: function () {
+        this.$openURL('http://alibaba.github.io/weex/')
+      }
+    }
+}
+</script>
+```
+
+打开终端，运行如下代码：
+
+```bash
+weex tech_list.we
+```
+
+你将会发现在我们列表的第一条已经实现了很漂亮的滑动效果。
+
+![](/assets/tut4.gif)
+
+想获得更多关于Slider组件的信息，请点击这里。
+
+正如我们之前所举的例子，这个滑动页面可以很轻松的在Weex Playground中用native渲染出来，如果你想让你的App应用也具有这样的能力，请点击此处学习如何把Weex集成到你自己的App引用中吧！
 
