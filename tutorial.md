@@ -49,5 +49,11 @@ Options:
   -h, --host [default: "127.0.0.1"]
 ```
 
+如果一切正常，切换到你刚才存储tech\_list.we的文件目录，然后运行：
+
+```bash
+weex tech_list.we
+```
+
 
 
