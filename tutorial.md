@@ -35,3 +35,19 @@
 npm install -g weex-toolkit
 ```
 
+安装完成后，你可以在命令行窗口直接输入weex后按enter键来检查是否安装成功。正确安装后会显示如下内容：
+
+```bash
+Usage: weex foo/bar/your_next_best_weex_script_file.we  [options]
+
+Options:
+  --qr     display QR code for native runtime, 
+  -o,--output  transform weex we file to JS Bundle, output path (single JS bundle file or dir)
+  -s,--server  start a http file server, weex .we file will be transforme to JS bundle on the server , specify local root path using the option  
+  ......
+  --help  Show help         
+  -h, --host [default: "127.0.0.1"]
+```
+
+
+
