@@ -35,7 +35,7 @@
 npm install -g weex-toolkit
 ```
 
-安装完成后，你可以在命令行窗口直接输入weex后按enter键来检查是否安装成功。正确安装后会显示如下内容：
+安装完成后，你可以在命令行窗口直接输入`weex`后按enter键来检查是否安装成功。正确安装后会显示如下内容：
 
 ```bash
 Usage: weex foo/bar/your_next_best_weex_script_file.we  [options]
@@ -55,5 +55,5 @@ Options:
 weex tech_list.we
 ```
 
-
+你默认的浏览器会自动打开新的窗口并显示一下内容（在这之前你最好运行`weex --version`来检查你的Weex Toolkit 版本是否大于0.1.0）：
 
