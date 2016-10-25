@@ -4,7 +4,7 @@ Weex的语法极大的借鉴了[Vue.js](http://vuejs.org/)，Vue.js是一个具�
 
 一个简单的Weex页面仅需要包含一段`<template>`代码、一段`<style>`代码和一段`<script>`代码。这三个部分共同描绘了一个完整的Weex页面。
 
-* **&lt;template&gt;**：_必需_。运用HTML的语法创建多个标签来描绘Weex页面的整体结构。每个标签代表一类组件。
+* [**&lt;template&gt;**](#template)：_必需_。运用HTML的语法创建多个标签来描绘Weex页面的整体结构。每个标签代表一类组件。
 * **&lt;style&gt;**：_可选_。基于CSS语法来描绘页面具体展示细节。
 * **&lt;script&gt;**：_可选_。基于JavaScript语法来渲染数据和行为。它定义了具体的数据内容以及数据的处理方式。
 
@@ -22,5 +22,5 @@ Weex的语法极大的借鉴了[Vue.js](http://vuejs.org/)，Vue.js是一个具�
 </script>
 ```
 
-## &lt;template&gt;
+## &lt;template&gt; {#template}
 
