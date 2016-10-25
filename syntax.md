@@ -4,7 +4,7 @@ Weex的语法极大的借鉴了[Vue.js](http://vuejs.org/)，Vue.js是一个具�
 
 一个简单的Weex页面仅需要包含一段`<template>`代码、一段`<style>`代码和一段`<script>`代码。这三个部分共同描绘了一个完整的Weex页面。
 
-* [**&lt;template&gt;**](#template)：_必需_。运用HTML的语法创建多个标签来描绘Weex页面的整体结构。每个标签代表一类组件。
+* **[&lt;template&gt;](#template)**：_必需_。运用HTML的语法创建多个标签来描绘Weex页面的整体结构。每个标签代表一类组件。
 * **&lt;style&gt;**：_可选_。基于CSS语法来描绘页面具体展示细节。
 * **&lt;script&gt;**：_可选_。基于JavaScript语法来渲染数据和行为。它定义了具体的数据内容以及数据的处理方式。
 
@@ -53,7 +53,7 @@ Weex的语法极大的借鉴了[Vue.js](http://vuejs.org/)，Vue.js是一个具�
 
 你可以理解为Weex的样式语法是CSS语法的一个子集，但某些地方却不完全相同。
 
-我们可以直接在`<template>`内的标签上用`style`来直接添加样式；也可以创建`<style>`标签，运用自定义的类名去给标签添加样式。举个例子：
+我们可以直接在`<template>`内的标签上用`style`来直接添加样式；也可以创建`<style>`标签，运用自定义的类名去给标签添加样式。示例如下：
 
 ```js
 <template>
@@ -72,12 +72,40 @@ Weex的语法极大的借鉴了[Vue.js](http://vuejs.org/)，Vue.js是一个具�
 
 * 点击查看Weex公共样式
 
-
 ### 注意：
 
 Weex基本遵循[HTML属性](https://en.wikipedia.org/wiki/HTML_attribute)命名规则，所以在对属性命名的时候请**不要使用驼峰命名法**，如果遇到较长的名字，请**以“-”隔开**。
 
 ## &lt;script&gt;
 
+Weex页面中的数据渲染和处理遵循JavaScript\(ES5\)的语法。示例如下：
 
+```js
+<template>
+  <container>
+    <text>The time is {{datetime}}</text>
+    <text>{{title}}</text>
+    <text>{{getTitle()}}</text>
+  </container>
+</template>
+
+<script>
+  module.exports = {
+    data: {
+      title: 'Alibaba',
+      datetime: null
+    },
+    methods: {
+      getTitle: function () {
+        return 'Weex Team'
+      }
+    },
+    created: function() {
+      this.datetime = new Date().toLocaleString()
+    }
+  }
+</script>
+```
+
+我们来分析一下上面的代码：`<script>`标签中的代码，定义了三个属性或方法，然后将其赋给了`module.exports`对象。
 
