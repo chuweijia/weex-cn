@@ -21,5 +21,93 @@
 </script>
 ```
 
+上面的代码将`size`和`title`数据绑定在了模版对应的位置上。
+
+我们也可以用`.`语法来绑定级联结构数据。让我们来看看下面的代码：
+
+```js
+<template>
+  <container>
+    <text style="font-size: {{title.size}}">{{title.value}}</text>
+  </container>
+</template>
+
+<script>
+  module.exports = {
+    data: {
+      title: {
+        size: 48,
+        value: 'Alibaba Weex Team'
+      }
+    }
+  }
+</script>
+```
+
+## 模版表达式
+
+除了直接数据绑定之外，Weex还支持简单的javascript表达式，示例如下：
+
+```js
+<template>
+  <container style="flex-direction: row;">
+    <text>{{firstName + ' ' + lastName}}</text>
+  </container>
+</template>
+
+<script>
+  module.exports = {
+    data: {
+      firstName: 'John',
+      lastName: 'Smith'
+    }
+  }
+</script>
+```
+
+该表达式将会在渲染页面的时候将值计算并插入到页面中。
+
+**提示：每一个绑定只能包含一个表达式**
+
+## 属性计算
+
+对于简单的操作，模版表达式可以很方便的实现。但是如果你的模版上有一些比较复杂的逻辑，你应该会用到属性计算。来看看下面这个例子：
+
+```js
+<template>
+  <container style="flex-direction: row;">
+    <text>{{fullName}}</text>
+    <text onclick="changeName" style="margin-left:10px;">CHANGE NAME</text>
+  </container>
+</template>
+
+<script>
+  module.exports = {
+    data: {
+      firstName: 'John',
+      lastName: 'Smith'
+    },
+    computed: {
+      fullName: {
+        get: function() {
+          return this.firstName + ' ' + this.lastName
+        },
+
+        set: function(v) {
+          var s = v.split(' ')
+          this.firstName = s[0]
+          this.lastName = s[1]
+        }
+      }
+    },
+    methods: {
+      changeName: function() {
+        this.fullName = 'Terry King'
+      }
+    }
+  }
+</script>
+```
+
 
 
