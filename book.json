@@ -1,0 +1,6 @@
+{
+    "plugins": [
+        "mdinhtml",
+        "prettify-html"
+    ]
+}
