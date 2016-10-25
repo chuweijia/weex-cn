@@ -4,7 +4,7 @@ Weex的语法极大的借鉴了[Vue.js](http://vuejs.org/)，Vue.js是一个具�
 
 一个简单的Weex页面仅需要包含一段`<template>`代码、一段`<style>`代码和一段`<script>`代码。这三个部分共同描绘了一个完整的Weex页面。
 
-* **[&lt;template&gt;](#template)**：_必需_。运用HTML的语法创建多个标签来描绘Weex页面的整体结构。每个标签代表一类组件。
+* [**&lt;template&gt;**](#template)：_必需_。运用HTML的语法创建多个标签来描绘Weex页面的整体结构。每个标签代表一类组件。
 * **&lt;style&gt;**：_可选_。基于CSS语法来描绘页面具体展示细节。
 * **&lt;script&gt;**：_可选_。基于JavaScript语法来渲染数据和行为。它定义了具体的数据内容以及数据的处理方式。
 
@@ -46,6 +46,38 @@ Weex的语法极大的借鉴了[Vue.js](http://vuejs.org/)，Vue.js是一个具�
 * `<list>`：循环列表根节点，适用于有多个可循环展示的列表页面
 
 目前Weex仅支持以上三种根节点。
+
 * 点击查看所有内置组件
+
+## &lt;style&gt;
+
+你可以理解为Weex的样式语法是CSS语法的一个子集，但某些地方却不完全相同。
+
+我们可以直接在`<template>`内的标签上用`style`来直接添加样式；也可以创建`<style>`标签，运用自定义的类名去给标签添加样式。举个例子：
+
+```js
+<template>
+  <container>
+    <text style="font-size: 64;">Alibaba</text>
+    <text class="large">Weex Team</text>
+  </container>
+</template>
+
+<style>
+  .large {font-size: 64;}
+</style>
+```
+
+上面例子中的两个`<text>`标签的字体都被设置为64px大小。
+
+* 点击查看Weex公共样式
+
+
+### 注意：
+
+Weex基本遵循[HTML属性](https://en.wikipedia.org/wiki/HTML_attribute)命名规则，所以在对属性命名的时候请**不要使用驼峰命名法**，如果遇到较长的名字，请**以“-”隔开**。
+
+## &lt;script&gt;
+
 
 
