@@ -113,7 +113,7 @@
 
 另外当我们点击CHANGE NAME时，将会执行`changeName`方法，此时`setter`方法将会被调用，对应的`this.firstName`和`this.lastName`将会被更新。
 
-提示：`data`和`methods`不能有重复字段。因为在整个代码执行的过程中，`this`关键字可以直接访问到它们。
+**提示：**`data`**和**`methods`**不能有重复字段。因为在整个代码执行的过程中，**`this`**关键字可以直接访问到它们。**
 
 ## 数据绑定中的特殊属性
 
