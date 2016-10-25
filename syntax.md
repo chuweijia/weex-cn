@@ -4,7 +4,7 @@ Weex的语法极大的借鉴了[Vue.js](http://vuejs.org/)，Vue.js是一个具�
 
 一个简单的Weex页面仅需要包含一段`<template>`代码、一段`<style>`代码和一段`<script>`代码。这三个部分共同描绘了一个完整的Weex页面。
 
-* **[&lt;template&gt;](#template)**：_必需_。运用HTML的语法创建多个标签来描绘Weex页面的整体结构。每个标签代表一类组件。
+* [**&lt;template&gt;**](#template)：_必需_。运用HTML的语法创建多个标签来描绘Weex页面的整体结构。每个标签代表一类组件。
 * **&lt;style&gt;**：_可选_。基于CSS语法来描绘页面具体展示细节。
 * **&lt;script&gt;**：_可选_。基于JavaScript语法来渲染数据和行为。它定义了具体的数据内容以及数据的处理方式。
 
@@ -107,5 +107,8 @@ Weex页面中的数据渲染和处理遵循JavaScript\(ES5\)的语法。示例�
 </script>
 ```
 
-我们来分析一下上面的代码：`<script>`标签中的代码，定义了三个属性或方法，然后将其赋给了`module.exports`对象。
+我们来分析一下上面的代码：`<script>`标签中的代码，定义了三个属性或方法，然后将其赋给了`module.exports`对象。页面中将会分行依次显示“当前的时间”、“Alibaba”和“Weex Team”。`<script>`标签中的`data`属性存储了用来绑定到`<template>`中的数据，当这些数据改变的时候，页面中的绑定值也会立即发生改变。当然，这些值也可以在各个方法里通过`this.x`来进行读写。
 
+* 点击查看组件定义参考文档
+
+接下来，让我们一起学习[数据绑定](/data_binding.md)吧！
