@@ -5,8 +5,8 @@ Weex的语法极大的借鉴了[Vue.js](http://vuejs.org/)，Vue.js是一个具�
 一个简单的Weex页面仅需要包含一段`<template>`代码、一段`<style>`代码和一段`<script>`代码。这三个部分共同描绘了一个完整的Weex页面。
 
 * [**&lt;template&gt;**](#template)：_必需_。运用HTML的语法创建多个标签来描绘Weex页面的整体结构。每个标签代表一类组件。
-* **&lt;style&gt;**：_可选_。基于CSS语法来描绘页面具体展示细节。
-* **&lt;script&gt;**：_可选_。基于JavaScript语法来渲染数据和行为。它定义了具体的数据内容以及数据的处理方式。
+* [**&lt;style&gt;**](#style)：_可选_。基于CSS语法来描绘页面具体展示细节。
+* [**&lt;script&gt;**](#script)：_可选_。基于JavaScript语法来渲染数据和行为。它定义了具体的数据内容以及数据的处理方式。
 
 ```java
 <template>
@@ -49,7 +49,7 @@ Weex的语法极大的借鉴了[Vue.js](http://vuejs.org/)，Vue.js是一个具�
 
 * 点击查看所有内置组件
 
-## &lt;style&gt;
+## &lt;style&gt; {#style}
 
 你可以理解为Weex的样式语法是CSS语法的一个子集，但某些地方却不完全相同。
 
@@ -76,7 +76,7 @@ Weex的语法极大的借鉴了[Vue.js](http://vuejs.org/)，Vue.js是一个具�
 
 Weex基本遵循[HTML属性](https://en.wikipedia.org/wiki/HTML_attribute)命名规则，所以在对属性命名的时候请**不要使用驼峰命名法**，如果遇到较长的名字，请**以“-”隔开**。
 
-## &lt;script&gt;
+## &lt;script&gt; {#script}
 
 Weex页面中的数据渲染和处理遵循JavaScript\(ES5\)的语法。示例如下：
 
@@ -112,3 +112,4 @@ Weex页面中的数据渲染和处理遵循JavaScript\(ES5\)的语法。示例�
 * 点击查看组件定义参考文档
 
 接下来，让我们一起学习[数据绑定](/data_binding.md)吧！
+
