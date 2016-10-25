@@ -8,3 +8,17 @@ Weex的语法极大的借鉴了[Vue.js](http://vuejs.org/)，Vue.js是一个具�
 * **&lt;style&gt;**：_可选_。基于CSS语法来描绘页面具体展示细节。
 * **&lt;script&gt;**：_可选_。基于JavaScript语法来渲染数据和行为。它定义了具体的数据内容以及数据的处理方式。
 
+```js
+<template>
+  <!-- (required) the structure of page -->
+</template>
+
+<style>
+  /* (optional) stylesheet */
+</style>
+
+<script>
+  /* (optional) the definition of data, methods and life-circle */
+</script>
+```
+
