@@ -144,5 +144,51 @@
 
 ### 事件处理器：on...
 
+事件处理器是一种以on为开头来命名的属性。属性名中on后面所跟的是事件的类型，属性所对应的值则是我们定义好的事件处理函数名。我们在调用的时候，无需用_mustache_语法`{{...}}`或加括号`()`。
+
+```js
+<template>
+  <text onclick="toggle">Toggle</text>
+</template>
+
+<script>
+  module.exports = {
+    methods: {
+      toggle: function () {
+        // todo
+      }
+    }
+  }
+</script>
+```
+
+### if属性和repeat属性
+
+`if`属性可以通过`true`或`false`值来控制组件的显示或隐藏。
+
+```js
+<template>
+  <container style="flex-direction: column;">
+    <text onclick="toggle">Toggle</text>
+    <image src="..." if="{{shown}}"></image>
+  </container>
+</template>
+
+<script>
+  module.exports = {
+    data: {
+      shown: true
+    },
+    methods: {
+      toggle: function () {
+        this.shown = !this.shown
+      }
+    }
+  }
+</script>
+```
+
+我们也可以用`repeat`属性来生成一个列表。
+
 
 
