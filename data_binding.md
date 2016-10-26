@@ -206,4 +206,28 @@ example2.items = []
 
 * 点击查看[更多关于显示逻辑控制的内容](/display_logic_control.md)
 
+### static属性
+
+`static`属性可以取消数据绑定，当数据改变的时候，视图将不会随之更新。
+
+```js
+<template>
+  <div static>
+    <text>{{ word }}</text>
+  </div>
+</template>
+
+<script>
+  module.exports = {
+    ready: function() {
+      this.word = 'Data changes'
+    },
+    data: {
+      word: 'Hello, static'
+    }
+  }
+</script>
+```
+
+
 
