@@ -140,7 +140,7 @@
 
 在上面的例子中，如果`{{size}}`和`{{status}}`没有绑定任何数据，将只有`class="title"`被渲染。
 
-* 点击查看[样式和类详细内容](/style_class.md)
+* 点击查看[更多关于样式和类的内容](/style_class.md)
 
 ### 事件处理器：on...
 
@@ -190,5 +190,20 @@
 
 我们也可以用`repeat`属性来生成一个列表。
 
+如果你想修改data中数组的值（像这样：`vm.items0[]={};`），这时视图上是不会触发更新的。别担心，我们提供了一个方法：`$set(index,item)`。
+
+```js
+// same as `example1.items[0] = ...` but triggers view update
+example1.items.$set(0, { childMsg: 'Changed!'})
+```
+
+当你修改数组长度的时候\(像这样：`vm.items.length = 0`\)，也是不会触发视图更新的。我们推荐你使用一个空数组去替换掉原来的数组。
+
+```js
+// same as `example2.items.length = 0` but triggers view update
+example2.items = []
+```
+
+* 点击查看[更多关于显示逻辑控制的内容](/display_logic_control.md)
 
 
