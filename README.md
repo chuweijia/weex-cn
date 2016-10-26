@@ -6,7 +6,7 @@
 * [语法](/syntax.md)
 
   * [数据绑定](/data_binding.md)
-  * [样式和类（待完善）](/style_class.md)
+  * [样式和类](/style_class.md)
   * [事件（待完善）](/events.md)
   * [显示逻辑控制（待完善）](/display_logic_control.md)
   * [渲染逻辑控制（待完善）](/render_logic_control.md)
@@ -18,6 +18,7 @@
 * 参考（待完善）
 
 * 示例（待完善）
+
 * 服务和工具（待完善）
 
 本中文版完全按照英文原版翻译，如想阅读英文版，请点击[Weex英文文档](http://alibaba.github.io/weex/doc/)
