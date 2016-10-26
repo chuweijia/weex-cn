@@ -190,7 +190,7 @@
 
 我们也可以用`repeat`属性来生成一个列表。
 
-如果你想修改data中数组的值（像这样：`vm.items0[]={};`），这时视图上是不会触发更新的。别担心，我们提供了一个方法：`$set(index,item)`。
+如果你想修改data中数组的值（像这样：`vm.items0[] = {};`），这时视图上是不会触发更新的。别担心，我们提供了一个方法：`$set(index,item)`。
 
 ```js
 // same as `example1.items[0] = ...` but triggers view update
@@ -228,6 +228,4 @@ example2.items = []
   }
 </script>
 ```
-
-
 
