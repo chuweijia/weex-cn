@@ -117,3 +117,32 @@
 
 ## 数据绑定中的特殊属性
 
+### 样式：`style`或`class`
+
+组件中标签的样式可以直接通过`style`属性来绑定：
+
+```js
+<template>
+  <text style="font-size: {{size}}; color: {{color}}; ...">...</text>
+</template>
+```
+
+当然，也可以通过`class`属性来绑定，**多个类名之间用空格隔开**：
+
+```js
+<template>
+  <container>
+    <text class="{{size}}"></text>
+    <text class="title {{status}}"></text>
+  </container>
+</template>
+```
+
+在上面的例子中，如果`{{size}}`和`{{status}}`没有绑定任何数据，将只有`class="title"`被渲染。
+
+* 点击查看[样式和类详细内容](/style_class.md)
+
+### 事件处理器：on...
+
+
+
