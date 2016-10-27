@@ -19,13 +19,17 @@ width: 400; height: 50; ...
 
 把样式直接写在style属性中，示例如下：
 
-```js
+```css
 <template>
   <container style="width: 400; height: 50;">
     ...
   </container>
 </template>
 ```
+
+以上代码将`<container>`标签的宽高分别设置成了`400px`和`50px`
+
+### `<style>`标签
 
 
 
