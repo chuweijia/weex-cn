@@ -79,3 +79,28 @@ width: 400; height: 50; ...
 
 ## 结合数据绑定
 
+页面数据也可以绑定在`style`和`class`属性中。示例如下：
+
+```js
+<template>
+  <container>
+    <text style="font-size: {{fontSize}};">Alibaba</text>
+    <text class="large {{textClass}}">Weex Team</text>
+  </container>
+</template>
+<style>
+  .large {font-size: 32;}
+  .highlight {color: #ff0000;}
+</style>
+<script>
+  module.exports = {
+    data: {
+      fontSize: 32,
+      textClass: 'highlight'
+    }
+  }
+</script>
+```
+
+
+
