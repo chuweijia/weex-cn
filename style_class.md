@@ -41,7 +41,7 @@ width: 400; height: 50; ...
 </style>
 ```
 
-样式表包含多条样式规则，每一条规则都有一个唯一的类以及用{...}包裹起来的若干样式构成。像下面这样：
+样式表包含多条样式规则，每一条规则都有一个唯一的类以及用`{...}`包裹起来的若干样式构成。像下面这样：
 
 ```css
 .title {width: 400; height: 50;}
@@ -51,7 +51,7 @@ width: 400; height: 50; ...
 
 ### `class`属性
 
-&lt;template&gt;标签中的class属性将会匹配&lt;style&gt;标签内的样式，class属性里面的类名需要用空格分开。看下面的例子：
+`<template>`标签中的`class`属性将会匹配`<style>`标签内的样式，`class`属性里面的类名需要用**空格**分开。看下面的例子：
 
 ```css
 <template>
@@ -66,6 +66,4 @@ width: 400; height: 50; ...
   .highlight {color: #ff0000;}
 </style>
 ```
-
-
 
