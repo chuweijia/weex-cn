@@ -12,7 +12,7 @@ width: 400; height: 50; ...
 
 在Weex页面中，样式将会以以下两种方式出现：
 
-* `<template>`标签内的`style`属性
+* `<template>`标签中的`style`属性
 * `<style>`标签内的样式表
 
 ### `style`属性
@@ -34,6 +34,32 @@ width: 400; height: 50; ...
 看下面的例子：
 
 ```css
+<style>
+  .wrapper {width: 600;}
+  .title {width: 400; height: 50;}
+  .highlight {color: #ff0000;}
+</style>
+```
+
+样式表包含多条样式规则，每一条规则都有一个唯一的类以及用{...}包裹起来的若干样式构成。像下面这样：
+
+```css
+.title {width: 400; height: 50;}
+```
+
+就是一条样式规则。
+
+### `class`属性
+
+&lt;template&gt;标签中的class属性将会匹配&lt;style&gt;标签内的样式，class属性里面的类名需要用空格分开。看下面的例子：
+
+```css
+<template>
+  <container class="wrapper">
+    <text class="title">...</text>
+    <text class="title highlight">...</text>
+  </container>
+</template>
 <style>
   .wrapper {width: 600;}
   .title {width: 400; height: 50;}
