@@ -102,5 +102,5 @@ width: 400; height: 50; ...
 </script>
 ```
 
-
+接下来，让我们一起学习[事件](/events.md)吧！
 
