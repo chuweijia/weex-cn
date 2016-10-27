@@ -31,5 +31,15 @@ width: 400; height: 50; ...
 
 ### `<style>`标签
 
+看下面的例子：
+
+```css
+<style>
+  .wrapper {width: 600;}
+  .title {width: 400; height: 50;}
+  .highlight {color: #ff0000;}
+</style>
+```
+
 
 
