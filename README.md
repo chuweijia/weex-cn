@@ -8,7 +8,7 @@
   * [数据绑定](/data_binding.md)
   * [样式和类](/style_class.md)
   * [事件](/events.md)
-  * [显示逻辑控制（待完善）](/display_logic_control.md)
+  * [显示逻辑控制](/display_logic_control.md)
   * [渲染逻辑控制（待完善）](/render_logic_control.md)
   * [组件封装（待完善）](/component_composed.md)
   * [查找元素（待完善）](/find_element.md)
