@@ -32,3 +32,66 @@ Weex目前共支持两种显示逻辑控制属性：`if`和`repeat`，它们使�
 
 ## `repeat`
 
+repeat仅用来对数组数据进行渲染，数组中的每一项都是一条结构化数据。也就是说， 可以直接将数组数据绑定在重复显示的组件或节点上。
+
+```
+<template>
+  <container>
+    <container repeat="{{list}}" class="{{gender}}">
+      <image src="{{avatar}}"></image>
+      <text>{{nickname}}</text>
+    </container>
+  </container>
+</template>
+
+<style>
+  .male {...}
+  .female {...}
+</style>
+
+<script>
+  module.exports = {
+    data: {
+      list: [
+        {gender: 'male', nickname: 'Li Lei', avatar: '...'},
+        {gender: 'female', nickname: 'Han Meimei', avatar: '...'},
+        ...
+      ]
+    }
+  }
+</script>
+```
+
+此外，不在数组中的数据也可以绑定在重复组件或节点上：
+
+```
+<template>
+  <container>
+    <container repeat="{{list}}" class="{{gender}}">
+       <image src="{{avatar}}"></image>
+       <text>{{nickname}} - {{group}}</text>
+    </container>
+  </container>
+</template>
+
+<style>
+  .male {...}
+  .female {...}
+</style>
+
+<script>
+  module.exports = {
+    data: {
+      group: '...',
+      list: [
+        {gender: 'male', nickname: 'Li Lei', avatar: '...'},
+        {gender: 'female', nickname: 'Han Meimei', avatar: '...'},
+        ...
+      ]
+    }
+  }
+</script>
+```
+
+
+
