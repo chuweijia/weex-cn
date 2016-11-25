@@ -134,3 +134,28 @@ repeat仅用来对数组数据进行渲染，数组中的每一项都是一条�
 </template>
 ```
 
+接下来，当`{{list}}`中的数据发生变化，如果检测到该条数据中`nickname`所对应的值没有发生变化，则该条数据所绑定的节点不会重新渲染。
+
+## 简写方式
+
+对于`if`和`repeat`属性，`{{}}`可以被省略。
+
+```js
+<template>
+  <container>
+    <text if="shown">Hello</text>
+    <text if="{{shown}}">Hello</text>
+  </container>
+</template>
+
+<script>
+  module.exports = {
+    data: function () {return {shown: true}}
+  }
+</script>
+```
+
+在上面的例子中，`if="shown"`和`if="{{shown}}"`的效果相同，两条Hello文本都将会被显示出来。
+
+接下来，让我们一起学习[渲染逻辑控制](/render_logic_control.md)吧！
+
