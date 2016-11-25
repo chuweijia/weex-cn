@@ -119,5 +119,18 @@ repeat仅用来对数组数据进行渲染，数组中的每一项都是一条�
 
 **使用**`track-by`**绑定特定属性，以避免重复渲染**
 
+通常，当数组中的数据发生变化，对应的`repeat`列表将整体被重新渲染。我们可以用`track-by`来指定数组中的某个键，当该键所对应的值没有发生变化的时候，该条数据不会被重新渲染。
 
+**注意：不能用数据绑定符**`{{}}`** 来设置**`track-by`**的属性值**
+
+```js
+<template>
+  <container>
+    <container repeat="{{list}}" track-by="nickname" class="{{gender}}"><!--译者注：此处直接写nickname即可-->
+      <image src="{{avatar}}"></image>
+      <text>{{nickname}} - {{group}}</text>
+    </container>
+  </container>
+</template>
+```
 
